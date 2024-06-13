@@ -93,7 +93,14 @@ divgeral : {
     textShadowColor: 'rgba(0, 0, 0, 0.4)',
     textShadowOffset: { width: 1.5, height: 1.5 },
     textShadowRadius: 8,
-  }
+  },
+
+  link: {
+    fontSize: 16,
+    color: '#1e90ff',
+    marginVertical: 10,
+    textDecorationLine: 'underline',
+  },
 
 })
 

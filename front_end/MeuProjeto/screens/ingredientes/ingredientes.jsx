@@ -33,7 +33,7 @@ export default function Ingredientes({ navigation }) {
     console.log(selectedIds)
     axios.post('http://192.168.1.26:5000/match', { ingredientes: selectedIds })
       .then(response => {
-        console.log('Ingredientes enviados com sucesso:', response.data);
+        
        
         navigation.navigate('Resultados', { resultados: response.data });
       })
