@@ -1,92 +1,126 @@
-export const estilera = ({
+import { StyleSheet } from "react-native";
 
-    divgeral : {
-        height: '100%',
-        width: '100%',
-        alignItems: 'center',
-        backgroundColor: '#FEFAE0',
-        },
-    
-        cabecalho: {
-          alignItems: 'center',
-          display: 'flex',
-         
-        },
+export const estilo = StyleSheet.create({
 
-        logo:{
-            height:200,
-            width:240,
-            marginTop:-10
-          },
-
-        card:{
-          marginTop:14,
-          backgroundColor: '#F2B20C',
-          width: 340,
-          borderRadius: 20,
-          alignItems: "center",
-          paddingBottom: 16,
-          padding:0
-                },
-
-      txtcard:{
-        color: '#D74011',
-        fontSize: 30,
-        marginTop: 2.5,
-            },
-
-      receitaimg:{
-        height: 200,
-        width: 280,
-        borderRadius:30,
-        marginTop: 10
-      },
-
-      textocard:{
-        color: '#141A29',
-        fontSize: 15,
-        marginTop: 2
-         },
-
-  subtitulocard:{
-    color: '#D74011',
-    fontSize: 15,
-
+divgeral : {
+  height: '100%',
+  width: '100%',
+  alignItems: 'center',
+  backgroundColor: '#FEFAE0',
   },
 
+  cabecalho:{
+    alignItems: 'center',
+    marginTop: -4
+  },
+ 
 
-     titulocard:{
-      fontSize: 18,
-      marginTop: 2,
-      color: '#D74011'
-     },
+  botao2 : {
+    height: 50,
+    width: 120,
+    backgroundColor: '#F9C40D',
+    alignItems: 'center',
+    borderRadius: 20,
+    padding: 7,
+    marginTop: -20,
+    alignItems : 'center',
+    justifyContent: 'center',
+    marginLeft:-128
+  },
 
-     cardContent: {
-      paddingHorizontal: 20,
-      paddingVertical: 10,
-      backgroundColor: '#F2B20C',
-      borderRadius: 8,
-      alignItems: 'center'
-    },
+  textobotao: {
+    color: '#D74011',
+    fontSize:13,
+    textAlign: 'center',
+    textShadowColor: 'rgba(100, 0, 0, 0.5)',
+    textShadowOffset: { width: 1.5, height: 1.5 },
+    textShadowRadius: 8,
+  },
 
-    botaoyt:{
-      width:30,
-      height: 30,
-      marginLeft: 85,
-      marginTop: -24
-    },
+  logo:{
+    height:200,
+    width:240,
+    marginTop:-80
+  },
 
-    botaotd:{
-      width: 20,
-      height: 20,
-      marginLeft: 89,
-      marginTop: -21
-    },
+  postimg: {
+    height: 200,
+    width: 240,
+    borderRadius: 30
+  },
 
-    textolink:{
-      color: '#D74011',
+  botao3 : {
+    height: 50,
+    width: 120,
+    backgroundColor: '#F9C40D',
+    marginTop: -50,
+    alignItems: 'center',
+    borderRadius: 20,
+    padding: 7,
+    alignItems : 'center',
+    justifyContent: 'center',  
+    marginRight: -128
+  },
+
+  corpo : {
+    alignItems: 'center'
+  },
+
+  roll:{
+    width:'100%',
+  },
+
+  post:{
+    marginTop: 20,
+    alignItems : 'center',
+  },
+
+  posttxt: {
+    fontSize:20,
+    color: '#000000',
+  },
+
+  recomendacoes :{
+    fontSize:30,
+    marginTop: 10,
+    marginBottom: 10,
+    color: '#D74011',
+    textShadowColor: 'rgba(100, 0, 0, 0.4)',
+    textShadowOffset: { width: 1.5, height: 1.5 },
+    textShadowRadius: 8,
+  },
+
+  botaotd:{
+    width: 20,
+    height: 20,
+    marginLeft: 97,
+    marginTop: -27
+  },
+
+  botaoyt:{
+    width:30,
+    height: 30,
+    marginLeft: 90,
+    marginTop: -35
+  },
+
+  link: {
     fontSize: 18,
-    marginTop: 10
-    }
+    color: '#D74011',
+    textDecorationLine: 'none',
+    marginLeft: -18
+  },
+
+  card:{
+    marginTop:14,
+    backgroundColor: '#F2B20C',
+    width: 340,
+    borderRadius: 20,
+    alignItems: "center",
+    paddingBottom: 16,
+    padding:15
+          },
 
 })
+
+

@@ -30,17 +30,14 @@ divgeral : {
 
   textobotao: {
     color: '#D74011',
-    fontSize:13,
+    fontSize:15,
+    fontFamily: 'Arial',
     textAlign: 'center',
-    textShadowColor: 'rgba(0, 0, 0, 0.4)',
-    textShadowOffset: { width: 1.5, height: 1.5 },
-    textShadowRadius: 8,
   },
-
   logo:{
-    height:200,
-    width:240,
-    marginTop:-80
+    height:220,
+    width:260,
+    marginTop:-180
   },
 
   postimg: {
@@ -63,7 +60,8 @@ divgeral : {
   },
 
   corpo : {
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 30
   },
 
   roll:{
@@ -77,22 +75,18 @@ divgeral : {
 
   posttxt: {
     fontSize:20,
-    color: '#D74011',
-    fontWeight: 'bold',
-    marginBottom: 40,
-    textShadowColor: 'rgba(0, 0, 0, 0.4)',
-    textShadowOffset: { width: 1.5, height: 1.5 },
-    textShadowRadius: 8,
+    color: '#000000',
   },
 
   recomendacoes :{
-    fontSize:30,
+    fontSize:22,
     marginTop: 50,
     marginBottom: 10,
     color: '#D74011',
     textShadowColor: 'rgba(0, 0, 0, 0.4)',
     textShadowOffset: { width: 1.5, height: 1.5 },
     textShadowRadius: 8,
+    textAlign: 'center'
   },
 
   link: {
@@ -101,6 +95,14 @@ divgeral : {
     marginVertical: 10,
     textDecorationLine: 'underline',
   },
+
+perfil:{
+  height:40,
+  width: 40,
+  marginLeft: 290,
+  marginTop: 80,
+  borderRadius: 30
+}
 
 })
 

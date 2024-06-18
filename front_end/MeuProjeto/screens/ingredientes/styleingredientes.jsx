@@ -10,6 +10,7 @@ export const estilera = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FEFAE0',
     alignItems: 'center',
+    marginTop: -5
   },
   logo: {
     width: 200,
@@ -32,39 +33,38 @@ export const estilera = StyleSheet.create({
     paddingLeft: 40,
     fontSize: 19,
     fontWeight: 'bold',
-    textShadowColor: 'rgba(0, 0, 0, 0.4)',
-    textShadowOffset: { width: 1.5, height: 1.5 },
-    textShadowRadius: 8,
   },
   txtgera: {
     backgroundColor: '#F9C40D',
     color: '#D74011',
-    fontSize: 16
+    fontSize: 16,
   },
   corpo: {
     padding: 10,
+    alignItems: 'center'
   },
   post: {
+    
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: 10,
     backgroundColor: 'rgba(215, 64, 17, 0.70)',
     borderRadius: 10,
-    height: 210,
-    width: 210
-  },
+    height: 120,
+    width: 120,
+      },
 
 enviar:{
   height: 50,
-  width: 80,
+  width: 100,
   alignItems: 'center',
   justifyContent: 'center',
   marginTop: 10,
   backgroundColor: '#D74011',
   paddingVertical: 5,
   borderRadius: 30,
-  fontSize: 16
+  fontSize: 16,
 },
 
   postSelecionado: {
@@ -85,12 +85,19 @@ enviar:{
 
   recomendacoes :{
     fontSize:30,
-    marginTop: 50,
+    marginTop: 20,
     marginBottom: 10,
     color: '#D74011',
     textShadowColor: 'rgba(0, 0, 0, 0.4)',
     textShadowOffset: { width: 1.5, height: 1.5 },
     textShadowRadius: 8,
   },
+
+  grid:{
   
+  
+  flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  }
 });

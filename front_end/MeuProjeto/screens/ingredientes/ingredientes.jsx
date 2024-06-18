@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Button, Pressable } fr
 import axios from 'axios';
 import { estilera } from './styleingredientes';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { ip } from '../../App';
 
 export default function Ingredientes({ navigation }) {
   const [ingredientes, setIngredientes] = useState([]);
@@ -10,7 +11,7 @@ export default function Ingredientes({ navigation }) {
 
   useEffect(() => {
    
-    axios.get('http://192.168.1.26:5000/ingredientes')
+    axios.get(`http://${ip}:5000/ingredientes`)
       .then(response => {
         setIngredientes(response.data);
       })
@@ -31,15 +32,13 @@ export default function Ingredientes({ navigation }) {
 
   const enviarIngredientesSelecionados = () => {
     console.log(selectedIds)
-    axios.post('http://192.168.1.26:5000/match', { ingredientes: selectedIds })
-      .then(response => {
-        
-       
-        navigation.navigate('Resultados', { resultados: response.data });
-      })
-      .catch(error => {
-        console.error('Erro ao enviar ingredientes:', error);
-      });
+    axios.post(`http://${ip}:5000/match`, { ingredientes: selectedIds })
+    .then(response => {
+      navigation.navigate('Resultados', { resultados: response.data });
+    })
+    .catch(error => {
+      console.error('Erro ao enviar ingredientes:', error);
+    });
   };
 
   return (
@@ -47,21 +46,15 @@ export default function Ingredientes({ navigation }) {
       <ScrollView>
         <View style={estilera.divgeral}>
           <View style={estilera.cabecalho}>
-            <Image
-              style={estilera.logo}
-              source={require('../../assets/WhatsApp_Image_2024-04-11_at_10.37.48-removebg-preview.png')}
-            />
             <View style={estilera.cardgera}>
               <Text style={estilera.botao3}>O que tem com você?</Text>
               <Text style={estilera.txtgera}>Selecione os itens</Text>
               <Pressable style={estilera.enviar} onPress={enviarIngredientesSelecionados}><Text>Enviar</Text></Pressable>
             </View>
           </View>
-          
           <View style={estilera.corpo}>
             <Text style={estilera.recomendacoes}>Ingredientes</Text>
-
-            <View>
+            <View style={estilera.grid}>  
               {ingredientes.map((ingrediente, index) => (
                 <TouchableOpacity key={index} onPress={() => toggleSelection(ingrediente.id)}>
                   <View style={[estilera.post, selectedIds.includes(ingrediente.id) && estilera.postSelecionado]}>
@@ -74,8 +67,6 @@ export default function Ingredientes({ navigation }) {
                 </TouchableOpacity>
               ))}
             </View>
-            
-            
           </View>
         </View>
       </ScrollView>

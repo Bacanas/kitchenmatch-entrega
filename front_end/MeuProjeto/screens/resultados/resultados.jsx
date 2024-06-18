@@ -16,35 +16,40 @@ export default function Resultados({ route, navigation }) {
               style={estiloResultados.logo}
               source={require('../../assets/WhatsApp_Image_2024-04-11_at_10.37.48-removebg-preview.png')}
             />
-            <View style={estiloResultados.cardgera}>
-              <Text style={estiloResultados.botao3}>Resultados</Text>
-            </View>
           </View>
-          
           <View style={estiloResultados.corpo}>
             <Text style={estiloResultados.recomendacoes}>Resultados da Seleção</Text>
-
             <View>
               {resultados[0].map((resultado, index) => (
-                <View key={index} style={estiloResultados.post}>
+                <View key={index} style={estiloResultados.cardgera}>
                   <Image
-                    style={estiloResultados.postimg}
-                    source={{ uri: resultado.Receita_Imagem }}
-                  />
-                  <Text style={estiloResultados.posttxt}>{resultado.Receita_Nome}</Text>
-                  <Text style={estiloResultados.descricao}>{resultado.Receita_Descricao}</Text>
-                  <Text
-                    style={estiloResultados.link}
-                    onPress={() => Linking.openURL(resultado.Receita_Link)}
-                  >
-                    Ver Receita
-                  </Text>
-                  <Text
-                    style={estiloResultados.link}
-                    onPress={() => Linking.openURL(resultado.Receita_Video)}
-                  >
-                    Ver Vídeo
-                  </Text>
+                        style={estiloResultados.postimg}
+                        source={{ uri: resultado.imagem_receita }}
+                      />
+                      <Text style={estiloResultados.posttxt}>{resultado.receitas_nome}</Text>
+                      <Text>{resultado.receitas_descricao}</Text>
+                      <Text
+                        style={estiloResultados.link}
+                        onPress={() => Linking.openURL(resultado.link_receita)}
+                        >
+                        Acesse no
+                      
+                      <Image
+                        source={require('../../assets/tudogostosologo.png')}
+                        style={estiloResultados.botaotd}
+                      />
+                      </Text>
+                      <Text
+                      style={estiloResultados.link}
+                      onPress={() => Linking.openURL(resultado.link_video)}
+                        >
+                        Acesse no
+                      
+                      <Image
+                        source={require('../../assets/youtubelogo.png')}
+                        style={estiloResultados.botaoyt}
+                      />
+                      </Text>
                 </View>
               ))}
             </View>
